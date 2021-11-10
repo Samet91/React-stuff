@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Tags from '../Tags/Tags';
 
 type CardProps = {
-  id?: number;
   name: string;
   description: string;
   categories?: string[];

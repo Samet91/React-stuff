@@ -3,21 +3,21 @@ import styled from 'styled-components';
 import Tags from '../Tags/Tags';
 
 type CardProps = {
-  content: {
-    name: string;
-    description: string;
-    categories?: string[];
-  };
+  name: string;
+  description: string;
+  categories?: string[];
 };
 
-export default function Card({ content }: CardProps): JSX.Element {
+export default function Card({
+  name,
+  description,
+  categories,
+}: CardProps): JSX.Element {
   return (
     <CardBody>
-      <h2>{content.name}</h2>
-      <p>{content.description}</p>
-      {content.categories?.map((category) => (
-      <Tags>{category}</Tags>
-      ))}
+      <H2>{name}</H2>
+      <p>{description}</p>
+      {categories && categories?.map((category) => <Tags>{category}</Tags>)}
     </CardBody>
   );
 }
@@ -30,4 +30,8 @@ const CardBody = styled.article`
   border: none;
   border-radius: 0.4em;
   margin: 20px;
+`;
+
+const H2 = styled.h2`
+  font-size: 20px;
 `;

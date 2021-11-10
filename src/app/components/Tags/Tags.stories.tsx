@@ -6,5 +6,5 @@ export default {
   component: Tags,
 };
 
-export const Regular = (): JSX.Element => <Tags>Text</Tags>
-export const Collectible = (): JSX.Element => <Tags>Collectible</Tags>
+export const Regular = (): JSX.Element => <Tags>Text</Tags>;
+export const Collectible = (): JSX.Element => <Tags>Collectible</Tags>;

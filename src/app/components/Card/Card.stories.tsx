@@ -14,8 +14,17 @@ const exampleContent = {
 const exampleContentDetail = {
   name: 'old',
   description: 'You could use..',
-  categories: ['toiletry', 'tool', 'every day use', 'plastic']
+  categories: ['toiletry', 'tool', 'every day use', 'plastic'],
 };
 
-export const Regular = (): JSX.Element => <Card content={exampleContent} />
-export const Detail = (): JSX.Element => <Card content={exampleContentDetail} />
+export const Regular = (): JSX.Element => (
+  <Card name={exampleContent.name} description={exampleContent.description} />
+);
+
+export const Detail = (): JSX.Element => (
+  <Card
+    name={exampleContentDetail.name}
+    description={exampleContentDetail.description}
+    categories={exampleContentDetail.categories}
+  />
+);

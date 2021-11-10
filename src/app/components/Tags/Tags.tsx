@@ -9,6 +9,7 @@ const Tags = styled.span`
   padding: 5px 8px;
   background-color: red;
   color: white;
+  display: inline-block;
 `;
 
 export default Tags;

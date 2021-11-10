@@ -2,8 +2,8 @@ import React from 'react';
 import Card from './Card';
 
 export default {
-  title: 'Component/Button',
+  title: 'Component/Card',
   component: Card,
 };
 
-export const card = (): JSX.Element => <div>Login</div>;
+export const card = (): JSX.Element => <Card></Card>

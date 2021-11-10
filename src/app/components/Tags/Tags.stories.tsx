@@ -6,4 +6,5 @@ export default {
   component: Tags,
 };
 
-export const tags = (): JSX.Element => <div>Login</div>;
+export const Regular = (): JSX.Element => <Tags>Text</Tags>
+export const Collectible = (): JSX.Element => <Tags>Collectible</Tags>

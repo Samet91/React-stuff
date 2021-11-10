@@ -2,20 +2,32 @@ import React from 'react';
 import styled from 'styled-components';
 import Tags from '../Tags/Tags';
 
-export default function Card(): JSX.Element {
+type CardProps = {
+    content: {
+      title: string;
+      description: string;
+      categories: string[];
+    };
+  };
+
+export default function Card({ content }: CardProps): JSX.Element {
+    const { title, description, categories } = content;
   return (
     <div>
       <Div>
         <H4>regular</H4>
         <Section>
-          <H3>title</H3>
-          <P>description</P>
+          <H3>{title}</H3>
+          <P>{description}</P>
         </Section>
         <H4>detail</H4>
         <Section>
-          <H3>title</H3>
-          <P>description</P>
-          <Tags />
+          <H3>{title}</H3>
+          <P>{categories}</P>
+          {categories.map(() => (
+          <Tags>{categories}</Tags> 
+          ))};
+          
         </Section>
       </Div>
     </div>
@@ -50,5 +62,5 @@ const Div = styled.div`
   border: solid 2px;
   margin: 20px;
   border-radius: 10px;
-  background-color: #7664b9;
+  background-color: #8f86ad;
 `;

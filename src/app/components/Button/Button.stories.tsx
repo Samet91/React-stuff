@@ -7,4 +7,3 @@ export default {
 };
 
 export const Login = (): JSX.Element => <Button>button</Button>;
-

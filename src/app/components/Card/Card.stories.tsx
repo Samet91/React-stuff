@@ -6,4 +6,16 @@ export default {
   component: Card,
 };
 
-export const card = (): JSX.Element => <Card></Card>
+const exampleContent = {
+  name: 'old',
+  description: 'You could use..',
+};
+
+const exampleContentDetail = {
+  name: 'old',
+  description: 'You could use..',
+  categories: ['toiletry', 'tool', 'every day use', 'plastic']
+};
+
+export const Regular = (): JSX.Element => <Card content={exampleContent} />
+export const Detail = (): JSX.Element => <Card content={exampleContentDetail} />

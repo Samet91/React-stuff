@@ -17,7 +17,8 @@ export default function Card({
     <CardBody>
       <H2>{name}</H2>
       <p>{description}</p>
-      {categories && categories?.map((category) => <Tags>{category}</Tags>)}
+      {categories &&
+        categories?.map((category) => <Tags key={category}>{category}</Tags>)}
     </CardBody>
   );
 }

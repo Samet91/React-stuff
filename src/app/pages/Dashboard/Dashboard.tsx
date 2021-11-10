@@ -11,19 +11,22 @@ export default function Dashboard(): JSX.Element {
       const fetchedThings = await response.json();
       setThings(fetchedThings);
     }
+
     fetchThings();
   }, []);
 
-  useEffect(() => {
-    console.log('fetched things');
-  }, [things]);
-
+  console.log(things);
   return (
     <main>
       <h1>Dashboard</h1>
       {things.length >= 0 &&
         things.map((things) => (
-          <Card name={things.name} description={things.description} />
+          <Card
+            key={things.id}
+            name={things.name}
+            description={things.description}
+            categories={things.categories}
+          />
         ))}
     </main>
   );

@@ -1,5 +1,6 @@
 export type Thing = {
-    name: string;
-    description: string;
-    categories?: string[]
-}
+  id?: number;
+  name: string;
+  description: string;
+  categories?: string[];
+};

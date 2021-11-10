@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Tags from '../Tags/Tags';
 
 type CardProps = {
+  id?: number;
   name: string;
   description: string;
   categories?: string[];
@@ -17,7 +18,8 @@ export default function Card({
     <CardBody>
       <H2>{name}</H2>
       <p>{description}</p>
-      {categories && categories?.map((category) => <Tags>{category}</Tags>)}
+      {categories &&
+        categories?.map((category) => <Tags key={category}>{category}</Tags>)}
     </CardBody>
   );
 }

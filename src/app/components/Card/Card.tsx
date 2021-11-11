@@ -6,10 +6,7 @@ type CardProps = {
   description: string;
 };
 
-export default function Card({
-  name,
-  description,
-}: CardProps): JSX.Element {
+export default function Card({ name, description }: CardProps): JSX.Element {
   return (
     <CardBody>
       <H2>{name}</H2>

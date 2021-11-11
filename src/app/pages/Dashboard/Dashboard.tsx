@@ -18,18 +18,13 @@ export default function Dashboard(): JSX.Element {
 
   return (
     <main>
-      
-        <h1>Dashboard</h1>
-        {things &&
-          things.map((thing) => (
-            <Link key={thing.id} to={`/stuff/${thing.id}`}>
-            <Card
-              name={thing.name}
-              description={thing.description}
-            />
-            </Link>
-          ))}
-      
+      <h1>Dashboard</h1>
+      {things &&
+        things.map((thing) => (
+          <Link key={thing.id} to={`/stuff/${thing.id}`}>
+            <Card name={thing.name} description={thing.description} />
+          </Link>
+        ))}
     </main>
   );
 }

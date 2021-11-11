@@ -5,7 +5,7 @@ import type { Thing } from '../../types';
 
 export default function Stuff(): JSX.Element {
   const [thing, setThing] = useState<null | Thing>(null);
-  const { thingID } = useParams();  //see app.tsx
+  const { thingID } = useParams(); //see app.tsx
 
   useEffect(() => {
     async function fetchThing() {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import Tags from '../Tags/Tags';
 
@@ -16,19 +16,18 @@ export default function DetailCard({
   description,
   categories,
 }: DetailCardProps): JSX.Element {
-  const navigate = useNavigate();
-
   return (
     <ArticleStyle>
-      <button onClick={() => navigate(-1)}>Back</button>
-      <p>{id}</p>
-      <H2>{name}</H2>
-      <p>{description}</p>
-      <ul>
-        {categories?.map((category) => (
-          <Tags key={category}>{category}</Tags>
-        ))}
-      </ul>
+      <Link to="/">
+        <p>{id}</p>
+        <H2>{name}</H2>
+        <p>{description}</p>
+        <ul>
+          {categories?.map((category) => (
+            <Tags key={category}>{category}</Tags>
+          ))}
+        </ul>
+      </Link>
     </ArticleStyle>
   );
 }

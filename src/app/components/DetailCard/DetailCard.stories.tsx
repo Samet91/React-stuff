@@ -7,9 +7,10 @@ export default {
 };
 
 export const Detail = (): JSX.Element => (
-  <DetailCard 
-  name={'Alex'}
-  description={'big'}
-  categories={['small', 'big', 'smaller']} 
+  <DetailCard
+    name={'Alex'}
+    description={'big'}
+    categories={['small', 'big', 'smaller']}
+    id={0}
   />
 );

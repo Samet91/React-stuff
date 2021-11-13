@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import Tags from '../Tags/Tags';
 
@@ -16,11 +16,22 @@ export default function DetailCard({
   description,
   categories,
 }: DetailCardProps): JSX.Element {
+  const navigate = useNavigate();
+
+  async function deleteCard() {
+    await fetch(`https://json-server.neuefische.de/stuff/${id}`, {
+      method: 'Delete',
+      body: JSON.stringify({ name: name, description: description }),
+    });
+    navigate('/');
+  }
+
   return (
     <ArticleStyle>
       <Link to="/">
         <Div>
           <p>{id}</p>
+          <Button onClick={deleteCard}>[X]</Button>
         </Div>
         <H2>{name}</H2>
         <p>{description}</p>

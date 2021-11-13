@@ -21,17 +21,6 @@ export default function Add(): JSX.Element {
     navigate('../', { replace: true });
   }
 
-  //   useEffect(() => {
-  //     async function deletePost() {
-  //       await fetch('https://jsonplaceholder.typicode.com/posts/1', {
-  //         method: 'DELETE',
-  //       });
-  //       setStatus('Delete successful');
-  //     }
-
-  //     deletePost();
-  //   }, []);
-
   return (
     <Form onSubmit={handleSubmit}>
       Name

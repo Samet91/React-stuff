@@ -19,7 +19,9 @@ export default function DetailCard({
   return (
     <ArticleStyle>
       <Link to="/">
-        <p>{id}</p>
+        <Div>
+          <p>{id}</p>
+        </Div>
         <H2>{name}</H2>
         <p>{description}</p>
         <ul>
@@ -44,4 +46,16 @@ const ArticleStyle = styled.article`
 
 const H2 = styled.h2`
   font-size: 20px;
+`;
+
+const Button = styled.button`
+  border: none;
+  color: white;
+  justify-items: flex-end;
+  text-decoration: none;
+`;
+
+const Div = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
